@@ -3,11 +3,11 @@
 
 
 
-fetch('http://puzzle.mead.io/puzzle').then((response)=>{
-    response.json().then((data)=>{
-        console.log(data)
-    })
-})
+// fetch('http://puzzle.mead.io/puzzle').then((response)=>{
+//     response.json().then((data)=>{
+//         console.log(data)
+//     })
+// })
 
 // const Geo_url ='https://api.mapbox.com/geocoding/v5/mapbox.places/Boston.json?access_token=pk.eyJ1IjoicHJhc2Fka2hhcmthbmRlIiwiYSI6ImNrdzRsODFvYTBpcHQyeG1leWk1cDZzbjgifQ.L2yU1OqvjiQHehY0ro_J7Q&limit=1'
 
@@ -30,7 +30,9 @@ weatherForm.addEventListener('submit', (e)=>{
     messageOne.textContent = 'Loading...'
     messageTwo.textContent = ''
 
-    fetch('http://localhost:3000/weather?search='+location).then((response)=>{
+    // /
+
+    fetch('/weather?search='+location).then((response)=>{
         response.json().then((data)=>{
             if(data.error){
                 console.log(data.error)
